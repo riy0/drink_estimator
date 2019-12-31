@@ -9,7 +9,7 @@ class Products with ChangeNotifier {
       title: 'Blue Mountain',
       description:
           'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
+      price: 100.9,
       imageUrl:
           'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     ),
@@ -122,12 +122,13 @@ class Products with ChangeNotifier {
           'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
     ),
   ];
+  // var _showFavoritesOnly = false;
 
   List<Product> get items {
     // if (_showFavoritesOnly) {
     //   return _items.where((prodItem) => prodItem.isFavorite).toList();
     // }
-    return [...items];
+    return [..._items];
   }
 
   List<Product> get favoriteItems {
@@ -138,19 +139,18 @@ class Products with ChangeNotifier {
     return _items.firstWhere((prod) => prod.id == id);
   }
 
-  void appProduct() {
+  // void showFavoritesOnly() {
+  //   _showFavoritesOnly = true;
+  //   notifyListeners();
+  // }
+
+  // void showAll() {
+  //   _showFavoritesOnly = false;
+  //   notifyListeners();
+  // }
+
+  void addProduct() {
     // _items.add(value);
     notifyListeners();
   }
-  /* 
-  void showFavoritesOnly() {
-    _showFavoritesOnly = true;
-  }
-
-  void showAll() {
-    _showFavoritesOnly = false;
-    notifyListeners();
-  }
-  */
-
 }
