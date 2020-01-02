@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           title: 'Drink Estimator',
           theme: ThemeData(
-            primarySwatch: Colors.purple,
+            primarySwatch: Colors.orange,
             accentColor: Colors.deepOrange,
           ),
           home: ProductsOverviewScreen(),
