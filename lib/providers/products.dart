@@ -6,120 +6,11 @@ class Products with ChangeNotifier {
   List<Product> _items = [
     Product(
       id: 'p1',
-      title: 'Blue Mountain',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100.9,
+      title: 'A Pan',
+      description: 'Prepare any meal you want.',
+      price: 49.99,
       imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p2',
-      title: 'Kona',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p3',
-      title: 'Mocha',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p4',
-      title: 'Toraja',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p5',
-      title: 'Supremo',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p6',
-      title: 'Supremo',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p7',
-      title: 'Kent',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p8',
-      title: 'Bourbon',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p9',
-      title: 'Bourbon',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p10',
-      title: 'Mundo Novo',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p11',
-      title: 'Amarello',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p12',
-      title: 'Caturra',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
-    ),
-    Product(
-      id: 'p13',
-      title: 'Catuai',
-      description:
-          'Blue Mountain is checked strictly by CIB. It is classified No.1, No.2, No.3, Peaberry, Triage',
-      price: 100,
-      imageUrl:
-          'https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
     ),
   ];
   // var _showFavoritesOnly = false;
@@ -149,8 +40,31 @@ class Products with ChangeNotifier {
   //   notifyListeners();
   // }
 
-  void addProduct() {
-    // _items.add(value);
+  void addProduct(Product product) {
+    final newProduct = Product(
+      title: product.title,
+      description: product.description,
+      price: product.price,
+      imageUrl: product.imageUrl,
+      id: DateTime.now().toString(),
+    );
+    _items.add(newProduct);
+    // _items.insert(0, newProduct); // at the start of the list
+    notifyListeners();
+  }
+
+  void updateProduct(String id, Product newProduct) {
+    final prodIndex = _items.indexWhere((prod) => prod.id == id);
+    if (prodIndex >= 0) {
+      _items[prodIndex] = newProduct;
+      notifyListeners();
+    } else {
+      print('...');
+    }
+  }
+
+  void deleteProduct(String id) {
+    _items.removeWhere((prod) => prod.id == id);
     notifyListeners();
   }
 }
