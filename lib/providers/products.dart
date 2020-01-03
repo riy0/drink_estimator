@@ -94,9 +94,17 @@ class Products with ChangeNotifier {
     }
   }
 
-  void updateProduct(String id, Product newProduct) {
+  Future<void> updateProduct(String id, Product newProduct) async {
     final prodIndex = _items.indexWhere((prod) => prod.id == id);
     if (prodIndex >= 0) {
+      final url = "https://my-drink-estimator.firebaseio.com/products/$id.json";
+      http.patch(url,
+          body: json.encode({
+            'title': newProduct.title,
+            'description': newProduct.description,
+            'price': newProduct.price,
+            'imageUrl': newProduct.imageUrl,
+          }));
       _items[prodIndex] = newProduct;
       notifyListeners();
     } else {
@@ -104,8 +112,22 @@ class Products with ChangeNotifier {
     }
   }
 
-  void deleteProduct(String id) {
-    _items.removeWhere((prod) => prod.id == id);
-    notifyListeners();
+  void deleteProduct(String id) async {
+    final url = "https://my-drink-estimator.firebaseio.com/products/$id.json";
+    final existProductIndex = _items.indexWhere((prod) => prod.id == id);
+    var existProduct = _items[existProductIndex];
+    _items.removeAt(existProductIndex);
+
+    http.delete(url).then((response) {
+      if (response.statusCode >= 400) {
+        throw Exception();
+      }
+      existProduct = null;
+      _items.insert(existProductIndex, existProduct);
+      notifyListeners();
+    }).catchError((_) {
+      _items.insert(existProductIndex, existProduct);
+      notifyListeners();
+    });
   }
 }
